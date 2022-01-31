@@ -22,12 +22,17 @@ const cambiaPantalla = (cambio) => {
         transicionInicio.style.backgroundSize = "cover"
         setTimeout(function() {
             transicionInicio.style.backgroundSize = "cover"
-            transicionInicio.style.backgroundImage = "url('assets/img/intro-2.gif')";
+            transicionInicio.style.backgroundImage = "url('assets/img/intro-4.gif')";
             setTimeout(function() {
                 transicionInicio.style.backgroundSize = "cover"
-                transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
-            }, 2000)
-        }, 2000);
+                transicionInicio.style.backgroundImage = "url('assets/img/intro-2.gif')";
+                setTimeout(function() {
+                    transicionInicio.style.backgroundSize = "cover"
+                    transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
+                    cambiaPantalla(3)
+                },2500)
+            }, 2500)
+        }, 2500);
     }
 }
 
