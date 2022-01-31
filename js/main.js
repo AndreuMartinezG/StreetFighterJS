@@ -47,6 +47,7 @@ const cambiaPantalla = (cambio) => {
         audioIntro.loop = true
         transicionInicio.style.backgroundImage = "url('assets/img/intro-1.gif')";
         transicionInicio.style.backgroundSize = "cover"
+
         setTimeout(function () {
             transicionInicio.style.backgroundSize = "cover"
             transicionInicio.style.backgroundImage = "url('assets/img/intro-4.gif')";
@@ -71,7 +72,10 @@ const cambiaPantalla = (cambio) => {
         audioIntro.volume = 0.2
         pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
         pulsaStart.style.backgroundSize = "cover"
-        
+        document.onkeydown = function (e) {
+            cambiaPantalla()
+        }
+
     }
 
 
@@ -82,7 +86,7 @@ const cambiaPantalla = (cambio) => {
 
 
     //Pantalla WIN
-    if(pantallaDeseada == "screen9") {
+    if (pantallaDeseada == "screen9") {
         win.style.backgroundImage = "url('assets/img/you-win.png')"
         win.style.backgroundSize = "cover"
 
@@ -94,7 +98,7 @@ const cambiaPantalla = (cambio) => {
 const cualquierTecla = () => {
 
     cambiaPantalla(4)
- 
+
 }
 
 
