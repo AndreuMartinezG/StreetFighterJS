@@ -9,6 +9,7 @@ body {
 .designScreen1 {
     height: 100vh;
     width: 100vw;
+    background-repeat: no-repeat;
 }
 
 .designScreen2 {
