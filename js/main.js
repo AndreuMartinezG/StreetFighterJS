@@ -1,10 +1,11 @@
 const screenTitle = document.getElementById('inicio');
 const transicionInicio = document.getElementById('transicionInicio')
 const pulsaStart = document.getElementById('pulsaStartInicio')
+const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
 
 // Funciones 
 
-    //Cambios de pantalla
+//Cambios de pantalla
 const cambiaPantalla = (cambio) => {
 
     let pantallaDeseada = "screen" + cambio;
@@ -20,6 +21,8 @@ const cambiaPantalla = (cambio) => {
 
     //Animacion para transicion entre inicio y pulsaStart
     if (pantallaDeseada == "screen2") {
+        audioIntro.play()
+        audioIntro.volume = 0.5
         transicionInicio.style.backgroundImage = "url('assets/img/intro-1.gif')";
         transicionInicio.style.backgroundSize = "cover"
         setTimeout(function() {
@@ -40,11 +43,19 @@ const cambiaPantalla = (cambio) => {
     }
 }
 
+//Funcion para detectar pulsacion de cualquier tecla en Pulsa Start para continuar
+
+const onKeyDownHandler = () => {
+    cambiaPantalla(4)
+}
+
 //TRansicion pantalla
 
 //Imagen para Pantalla inicio
 screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
 screenTitle.style.backgroundSize = "cover"
 
+
+//Imagen para Pantalla Pulsa Cualquier tecla para continuar
 pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
 pulsaStart.style.backgroundSize = "cover"
