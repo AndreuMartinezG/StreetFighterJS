@@ -19,10 +19,14 @@ const cambiaPantalla = (cambio) => {
         document.getElementById(pantalla).style.display = "none";
     }
 
+    //Animacion de Cambio y sonido pagina titulo
+
+
     //Animacion para transicion entre inicio y pulsaStart
     if (pantallaDeseada == "screen2") {
         audioIntro.play()
         audioIntro.volume = 0.5
+        audioIntro.loop = true
         transicionInicio.style.backgroundImage = "url('assets/img/intro-1.gif')";
         transicionInicio.style.backgroundSize = "cover"
         setTimeout(function() {
@@ -36,10 +40,20 @@ const cambiaPantalla = (cambio) => {
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
                     setTimeout(function() {
                         cambiaPantalla(3)
-                    },2500)
-                },2500)
-            }, 2500)
-        }, 2500);
+                    },3750)
+                },3750)
+            }, 3750)
+        }, 3750);
+    }
+
+    if (pantallaDeseada == "screen3") {
+        audioIntro.play()
+        pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
+        pulsaStart.style.backgroundSize = "cover"
+    }
+
+    if (pantallaDeseada == "screen4") {
+        audioIntro.pause()
     }
 }
 

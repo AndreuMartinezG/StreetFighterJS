@@ -7,15 +7,11 @@ body {
 }
 
 .designScreen1 {
-    background-color: green;
- background-size: co;
     height: 100vh;
     width: 100vw;
 }
 
 .designScreen2 {
-    background-color: red;
-
     height: 100vh;
     width: 100vw;
 }
