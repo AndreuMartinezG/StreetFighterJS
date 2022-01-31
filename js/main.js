@@ -47,4 +47,4 @@ screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
 screenTitle.style.backgroundSize = "cover"
 
 pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
-pulsaStart.style.backgroundImage = "cover"
+pulsaStart.style.backgroundSize = "cover"
