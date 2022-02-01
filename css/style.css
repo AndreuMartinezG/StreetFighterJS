@@ -30,18 +30,58 @@ body {
     width: 100vw;
 }
 
+
+/*Diseño pantalla 5 - Selecciona personaje 1*/
 .designScreen5 {
     background-color: tomato;
-
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.designScreen6 {
-    background-color:wheat;
+.containerSeleccionarPlayer {
+    height: 55em;
+    width: 120em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.bandera {
+    height: 10em;
+    width: 100em;
+    background-color: red;
+}
+
+.selectPlayer {
+    height: 30em;
+    width: 100em;
+    background-color: rosybrown;
+}
+
+.stats {
+    height: 5em;
+    width: 70em;
+    background-color: royalblue;
+}
+
+.continuar {
+    height: 5em;
+    width: 10em;
+    background-color: seagreen;
+}
+/*Diseño pantalla 6 - Seleccion personaje 2*/
+.designScreen6 {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .designScreen7 {

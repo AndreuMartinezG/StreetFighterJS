@@ -1,6 +1,8 @@
 const screenTitle = document.getElementById('inicio');
 const transicionInicio = document.getElementById('transicionInicio')
 const pulsaStart = document.getElementById('pulsaStartInicio')
+const selectPj1 = document.getElementById('pj1')
+const selectPj2 = document.getElementById('pj2')
 const win = document.getElementById('pagWin')
 const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3')
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
@@ -11,10 +13,11 @@ const screen3Tecla = document.getElementById('screen3')
 
 
 // Pantalla inicio titulo
+audioTitulo.volume = 0.1
+audioTitulo.play()
 screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
 screenTitle.style.backgroundSize = "cover"
-audioTitulo.volume = 0.2
-audioTitulo.play()
+
 
 //Cambios de pantalla
 const cambiaPantalla = (cambio) => {
@@ -106,7 +109,6 @@ const cambiaPantalla = (cambio) => {
             cambiaPantalla(4)
         }*/
         
-
     }
 
 
@@ -115,6 +117,14 @@ const cambiaPantalla = (cambio) => {
         audioIntro.pause()
     }
 
+
+    if (pantallaDeseada =="screen5") {
+        selectPj1.style.backgroundColor = "grey"
+    }
+
+    if (pantallaDeseada =="screen6") {
+        selectPj2.style.backgroundColor = "grey"
+    }
 
     //Pantalla WIN
     if (pantallaDeseada == "screen9") {

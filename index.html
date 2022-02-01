@@ -12,7 +12,7 @@
 
 <body>
 
-    
+
     <section id="screen1" name="Inicio" onclick="cambiaPantalla(2)">
         <div class="designScreen1" id="inicio">Pantalla INICIOS</div>
     </section>
@@ -21,7 +21,7 @@
         <div class="designScreen2" id="transicionInicio">transicionInicio</div>
     </section>
 
-    <section id="screen3" name="pulsaStartInicio" style="display:none" >
+    <section id="screen3" name="pulsaStartInicio" style="display:none">
         <div class="designScreen3" id="pulsaStartInicio" onclick="cambiaPantalla(4)">pulsaStartInicio</div>
     </section>
 
@@ -30,11 +30,25 @@
     </section>
 
     <section id="screen5" name="seleccionaPersonaje" style="display:none" onclick="cambiaPantalla(6)">
-        <div class="designScreen5">seleccionaPersonaje</div>
+        <div class="designScreen5" id="pj1">
+            <div class="containerSeleccionarPlayer">
+                <div class="bandera"></div>
+                <div class="selectPlayer"></div>
+                <div class="stats"></div>
+                <div class="continuar"></div>
+            </div>
+        </div>
     </section>
 
     <section id="screen6" name="seleccionaPersonaje2" style="display:none" onclick="cambiaPantalla(7)">
-        <div class="designScreen6">seleccionaPersonaje2</div>
+        <div class="designScreen6" id="pj2">
+            <div class="containerSeleccionarPlayer">
+                <div class="bandera"></div>
+                <div class="selectPlayer"></div>
+                <div class="stats"></div>
+                <div class="continuar"></div>
+            </div>
+        </div>
     </section>
 
     <section id="screen7" name="presentaciónBatalla" style="display:none" onclick="cambiaPantalla(8)">
