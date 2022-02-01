@@ -158,8 +158,7 @@ const selectorFighter = (nFighter) => {
         player1 = allFighters[nFighter];
         let personajePrimero = document.getElementById(nFighter);
         let datosPersonaje = document.getElementById("estadisticas" + 1);
-        console.log(personajePrimero)
-        //una vez he escogido el coche, invalido el img para que nadie haga onclick sobre él
+        
         personajePrimero.disabled = true;
         personajePrimero.classList.add("playerSelected");
         datosPersonaje.innerHTML = `
@@ -169,7 +168,24 @@ const selectorFighter = (nFighter) => {
             Defensa: ${player1.defensa}<br>
             Resistencia: ${player1.resistencia}
         `;
-       
-    } 
+        console.log(player1) 
+        console.log(personajePrimero)
+
+    }
+    if(player2 == "") {
+        player2 = allFighters[nFighter];
+        let personajeSegundo = document.getElementById(nFighter);
+        let datosPersonaje = document.getElementById("estadisticas" + 2);
+        
+        personajeSegundo.disabled = true;
+        personajeSegundo.classList.add("playerSelected");
+        datosPersonaje.innerHTML = `
+            Nombre: ${player2.nombre}<br>
+            Vida: ${player2.vida}<br>
+            Ataque: ${player2.ataque}<br>
+            Defensa: ${player2.defensa}<br>
+            Resistencia: ${player2.resistencia}
+        `;
+    }
 } 
 

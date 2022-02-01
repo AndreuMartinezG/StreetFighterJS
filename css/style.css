@@ -49,6 +49,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .bandera {
@@ -160,7 +161,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: red
+    color: red;
+    cursor: pointer;
 }
 /*Diseño pantalla 6 - Seleccion personaje 2*/
 
