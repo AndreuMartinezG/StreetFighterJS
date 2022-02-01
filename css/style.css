@@ -138,6 +138,10 @@ body {
     
 }
 
+.playerSelected {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
 .stats {
     height: 5em;
     width: 70em;

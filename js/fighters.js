@@ -31,3 +31,21 @@ let luchador6 = new Luchador("E.Honda",300,20,10,10,"Japón");
 let luchador7 = new Luchador("Zangief",300,20,10,10,"URSS");
 let luchador8 = new Luchador("Dhalsim",300,20,10,10,"India");
 
+
+//Generacion de diccionario de los Luchadores
+let allFighters = {
+    1 : luchador1,
+    2 : luchador2,
+    3 : luchador3,
+    4 : luchador4,
+    5 : luchador5,
+    6 : luchador6,
+    7 : luchador7,
+    8 : luchador8
+};
+
+let player1 = "";
+
+let player2 = "";
+
+let ganador = "";
