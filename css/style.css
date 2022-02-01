@@ -60,7 +60,82 @@ body {
 .selectPlayer {
     height: 30em;
     width: 100em;
-    background-color: rosybrown;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.player1 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/ryuSelect.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player2 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/kenSelect.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player3 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/chunLiSelect.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.player4 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/guileSelect.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player5 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/blankaSelect.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player6 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/eHondaSelect.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.player7 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/zangiefSelect.gif);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player8 {
+    height: 30em;
+    width: 12.5em;
+    background-image: url(/assets/img/dhalsimSelect.gif);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
 .stats {
