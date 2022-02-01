@@ -15,8 +15,9 @@ class Luchador {
     }
 
     defender() {
-        return this.defensa = 0;
+        return this.defensa = this.resistencia + this.defensa;
     }
+
 };
 
 //Instanciando luchadores
@@ -30,3 +31,4 @@ let luchador6 = new Luchador("E.Honda",300,20,10,10,"Japón");
 let luchador7 = new Luchador("Zangief",300,20,10,10,"URSS");
 let luchador8 = new Luchador("Dhalsim",300,20,10,10,"India");
 
+console.log(luchador1.vida)

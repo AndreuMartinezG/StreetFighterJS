@@ -4,6 +4,8 @@ const pulsaStart = document.getElementById('pulsaStartInicio')
 const win = document.getElementById('pagWin')
 const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3')
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
+const screen3Tecla = document.getElementById('screen3')
+
 
 // Funciones 
 
@@ -11,6 +13,8 @@ const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
 // Pantalla inicio titulo
 screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
 screenTitle.style.backgroundSize = "cover"
+audioTitulo.volume = 0.2
+audioTitulo.play()
 
 //Cambios de pantalla
 const cambiaPantalla = (cambio) => {
@@ -32,6 +36,7 @@ const cambiaPantalla = (cambio) => {
         //Imagen para Pantalla inicio
         screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
         screenTitle.style.backgroundSize = "cover"
+        audioTitulo.volume = 0.2
         audioTitulo.play()
         setTimeout(function () {
             cambiaPantalla(2)
@@ -40,6 +45,14 @@ const cambiaPantalla = (cambio) => {
 
 
     //Animacion para transicion entre inicio y pulsaStart
+
+    /* Intento de asignar variable a los time out de las transiciones
+    
+    let transicion2;
+    let transicion3;
+    let transicion4;*/
+    let transicion1;
+
     if (pantallaDeseada == "screen2") {
         audioTitulo.pause()
         audioIntro.play()
@@ -48,7 +61,9 @@ const cambiaPantalla = (cambio) => {
         transicionInicio.style.backgroundImage = "url('assets/img/intro-1.gif')";
         transicionInicio.style.backgroundSize = "cover"
 
-        setTimeout(function () {
+
+
+        transicion1 = setTimeout(() => {
             transicionInicio.style.backgroundSize = "cover"
             transicionInicio.style.backgroundImage = "url('assets/img/intro-4.gif')";
             setTimeout(function () {
@@ -68,13 +83,29 @@ const cambiaPantalla = (cambio) => {
 
     //Imagen para Pantalla Pulsa Cualquier tecla para continuar
     if (pantallaDeseada == "screen3") {
+
+        /* Intento de Detener las transiciones
+        clearTimeout(transicion1)
+        clearTimeout(transicion2)
+        clearTimeout(transicion3)
+        clearTimeout(transicion4)
+        */
+        transicion1 = "";
         audioIntro.play()
         audioIntro.volume = 0.2
         pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
         pulsaStart.style.backgroundSize = "cover"
-        document.onkeydown = function (e) {
-            cambiaPantalla()
-        }
+        /*
+        pulsaStart.addEventListener('keydown', cambiaPantalla())*/
+
+        
+        //pulsaStart.addEventListener("keydown", cualquierTecla());
+        
+        /*
+        pulsaStart.onkeydown = function (e) {
+            cambiaPantalla(4)
+        }*/
+        
 
     }
 
