@@ -60,7 +60,7 @@ body {
 .selectPlayer {
     height: 30em;
     width: 100em;
-    background-color: black;
+    background-color: #202124;
     display: flex;
     flex-direction: row;
 }
@@ -143,9 +143,14 @@ body {
     filter: grayscale(100%);
 }
 .stats {
+    color: red;
     height: 5em;
-    width: 70em;
-    background-color: royalblue;
+    width: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .continuar {

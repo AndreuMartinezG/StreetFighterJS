@@ -127,11 +127,11 @@ const cambiaPantalla = (cambio) => {
 
 
     if (pantallaDeseada =="screen5") {
-        selectPj1.style.backgroundColor = "grey"
+        selectPj1.style.backgroundColor = "#202124"
     }
 
     if (pantallaDeseada =="screen6") {
-        selectPj2.style.backgroundColor = "grey"
+        selectPj2.style.backgroundColor = "#202124"
     }
 
     //Pantalla WIN
@@ -162,11 +162,13 @@ const selectorFighter = (nFighter) => {
         //una vez he escogido el coche, invalido el img para que nadie haga onclick sobre él
         personajePrimero.disabled = true;
         personajePrimero.classList.add("playerSelected");
-        datosPersonaje.innerHTML = `Nombre: ${player1.nombre}`;
-        datosPersonaje.innerHTML = `Vida: ${player1.vida}`;
-        datosPersonaje.innerHTML = `Ataque: ${player1.vida}`;
-        datosPersonaje.innerHTML = `Defensa: ${player1.vida}`;
-        datosPersonaje.innerHTML = `Resistencia: ${player1.vida}`;
+        datosPersonaje.innerHTML = `
+            Nombre: ${player1.nombre}<br>
+            Vida: ${player1.vida}<br>
+            Ataque: ${player1.ataque}<br>
+            Defensa: ${player1.defensa}<br>
+            Resistencia: ${player1.resistencia}
+        `;
        
     } 
 } 
