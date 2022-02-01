@@ -85,10 +85,10 @@ const cambiaPantalla = (cambio) => {
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
                     setTimeout(function () {
                         cambiaPantalla(3)
-                    }, 3750)
-                }, 3750)
-            }, 3750)
-        }, 3750);
+                    }, 50)
+                }, 50)
+            }, 50)
+        }, 50);
     }
 
 
@@ -150,5 +150,24 @@ const cualquierTecla = () => {
 
 }
 
+//Funcion para seleccionar Personaje
 
+const selectorFighter = (nFighter) => {
+    
+    if(player1 == ""){
+        player1 = allFighters[nFighter];
+        let personajePrimero = document.getElementById(nFighter);
+        let datosPersonaje = document.getElementById("estadisticas" + 1);
+        console.log(personajePrimero)
+        //una vez he escogido el coche, invalido el img para que nadie haga onclick sobre él
+        personajePrimero.disabled = true;
+        personajePrimero.classList.add("playerSelected");
+        datosPersonaje.innerHTML = `Nombre: ${player1.nombre}`;
+        datosPersonaje.innerHTML = `Vida: ${player1.vida}`;
+        datosPersonaje.innerHTML = `Ataque: ${player1.vida}`;
+        datosPersonaje.innerHTML = `Defensa: ${player1.vida}`;
+        datosPersonaje.innerHTML = `Resistencia: ${player1.vida}`;
+       
+    } 
+} 
 
