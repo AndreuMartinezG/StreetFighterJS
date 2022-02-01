@@ -18,6 +18,14 @@ audioTitulo.play()
 screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
 screenTitle.style.backgroundSize = "cover"
 
+//Limpiar registro de la batalla para empezar otra partida
+
+const cleanGame = () => {
+    player1 = "";
+    player2 = "";
+    ganador = "";
+}
+
 
 //Cambios de pantalla
 const cambiaPantalla = (cambio) => {
