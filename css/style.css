@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    /*font-family: 'Press Start 2P', cursive;*/
+    font-family: 'Press Start 2P', cursive;
     height: 100vh;
     width: 100vw;
 }
@@ -154,7 +154,13 @@ body {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
+.datosPj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: red;
+}
 .continuar {
     height: 5em;
     width: 10em;
@@ -165,15 +171,9 @@ body {
     color: red;
     cursor: pointer;
 }
-/*Diseño pantalla 6 - Seleccion personaje 2*/
-
-.designScreen6 {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.divblanco {
+    width: 10em;
+    height: 5em;
 }
 
 .designScreen7 {

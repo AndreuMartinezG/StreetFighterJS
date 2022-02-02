@@ -42,14 +42,7 @@ let allFighters = {
     6 : luchador6,
     7 : luchador7,
     8 : luchador8,
-    9 : luchador1,
-    10 : luchador2,
-    11 : luchador3,
-    12 : luchador4,
-    13 : luchador5,
-    14 : luchador6,
-    15 : luchador7,
-    16 : luchador8
+
 };
 
 let player1 = "";

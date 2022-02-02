@@ -32,23 +32,30 @@
     <section id="screen5" name="seleccionaPersonaje" style="display:none">
         <div class="designScreen5" id="pj1">
             <div class="containerSeleccionarPlayer">
-                <div class="bandera">SELECCIONA PLAYER 1</div>
+                <div class="bandera">SELECCIONA PLAYER 1 y PLAYER 2</div>
                 <div class="selectPlayer">
-                    <div class="player1 playerChoosing"  onclick="selectorFighter(1)" id="1"></div>
-                    <div class="player2 playerChoosing"  onclick="selectorFighter(2)" id="2"></div>
-                    <div class="player3 playerChoosing"  onclick="selectorFighter(3)" id="3"></div>
-                    <div class="player4 playerChoosing"  onclick="selectorFighter(4)" id="4"></div>
-                    <div class="player5 playerChoosing"  onclick="selectorFighter(5)" id="5"></div>
-                    <div class="player6 playerChoosing"  onclick="selectorFighter(6)" id="6"></div>
-                    <div class="player7 playerChoosing"  onclick="selectorFighter(7)" id="7"></div>
-                    <div class="player8 playerChoosing"  onclick="selectorFighter(8)" id="8"></div>
+                    <div class="player1 playerChoosing" onclick="selectorFighter(1)" id="1"></div>
+                    <div class="player2 playerChoosing" onclick="selectorFighter(2)" id="2"></div>
+                    <div class="player3 playerChoosing" onclick="selectorFighter(3)" id="3"></div>
+                    <div class="player4 playerChoosing" onclick="selectorFighter(4)" id="4"></div>
+                    <div class="player5 playerChoosing" onclick="selectorFighter(5)" id="5"></div>
+                    <div class="player6 playerChoosing" onclick="selectorFighter(6)" id="6"></div>
+                    <div class="player7 playerChoosing" onclick="selectorFighter(7)" id="7"></div>
+                    <div class="player8 playerChoosing" onclick="selectorFighter(8)" id="8"></div>
+                </div>
+                <div class="datosPj">
+                    <div class="eleccion1">PLAYER 1 --></div>
+                    <div class="stats" id="estadisticas1"></div>
+                    <div class="divblanco"></div>
+                    <div class="eleccion2">PLAYER 2 --></div>
+                    <div class="stats" id="estadisticas2"></div>
                 </div>
                 <div class="stats" id="estadisticas1"></div>
-                <div class="continuar" onclick="cambiaPantalla(6)">Select P1</div>
+                <div class="continuar" onclick="cambiaPantalla(7)">Batalla</div>
             </div>
         </div>
     </section>
-
+    <!--
     <section id="screen6" name="seleccionaPersonaje2" style="display:none">
         <div class="designScreen6" id="pj2">
             <div class="containerSeleccionarPlayer">
@@ -67,7 +74,7 @@
                 <div class="continuar" onclick="cambiaPantalla(7)">Select P2</div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section id="screen7" name="presentaciónBatalla" style="display:none" onclick="cambiaPantalla(8)">
         <div class="designScreen7">presentaciónBatalla</div>

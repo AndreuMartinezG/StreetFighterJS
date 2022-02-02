@@ -2,7 +2,7 @@ const screenTitle = document.getElementById('inicio');
 const transicionInicio = document.getElementById('transicionInicio')
 const pulsaStart = document.getElementById('pulsaStartInicio')
 const selectPj1 = document.getElementById('pj1')
-const selectPj2 = document.getElementById('pj2')
+
 const win = document.getElementById('pagWin')
 const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3')
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
@@ -32,7 +32,7 @@ const cleanGame = () => {
 const cambiaPantalla = (cambio) => {
 
     let pantallaDeseada = "screen" + cambio;
-    let arrayPantallas = ["screen1", "screen2", "screen3", "screen4", "screen5", "screen6", "screen7", "screen8", "screen9"];
+    let arrayPantallas = ["screen1", "screen2", "screen3", "screen4", "screen5", "screen7", "screen8", "screen9"];
 
     arrayPantallas = arrayPantallas.filter(valor => !pantallaDeseada.includes(valor));
 
@@ -61,12 +61,8 @@ const cambiaPantalla = (cambio) => {
 
     //Animacion para transicion entre inicio y pulsaStart
 
-    /* Intento de asignar variable a los time out de las transiciones
-    
-    let transicion2;
-    let transicion3;
-    let transicion4;*/
-    let transicion1;
+    /* Intento de asignar variable a los time out de las transiciones*/
+
 
     if (pantallaDeseada == "screen2") {
         audioTitulo.pause()
@@ -144,10 +140,6 @@ const cambiaPantalla = (cambio) => {
         selectPj1.style.backgroundColor = "#202124"
     }
 
-    if (pantallaDeseada =="screen6") {
-        selectPj2.style.backgroundColor = "#202124"
-    }
-
     //Pantalla WIN
     if (pantallaDeseada == "screen9") {
         win.style.backgroundImage = "url('assets/img/you-win.png')"
@@ -158,12 +150,6 @@ const cambiaPantalla = (cambio) => {
 
 //Funcion para detectar pulsacion de cualquier tecla en Pulsa Start para continuar
 
-const cualquierTecla = () => {
-
-    cambiaPantalla(4)
-
-}
-
 //Funcion para seleccionar Personaje
 
 const selectorFighter = (nFighter) => {
@@ -173,7 +159,7 @@ const selectorFighter = (nFighter) => {
         player1 = allFighters[nFighter];
         let personajePrimero = document.getElementById(nFighter);
         let datosPersonaje = document.getElementById("estadisticas" + 1);
-    
+        personajePrimero.onclick = "";
         personajePrimero.classList.add("playerSelected");
         datosPersonaje.innerHTML = `
             Nombre: ${player1.nombre}<br>
@@ -187,7 +173,7 @@ const selectorFighter = (nFighter) => {
         player2 = allFighters[nFighter];
         let personajeSegundo = document.getElementById(nFighter);
         let datosPersonaje2 = document.getElementById("estadisticas" + 2);
-       console.log(personajeSegundo)
+        console.log(personajeSegundo)
         personajeSegundo.classList.add("playerSelected");
         datosPersonaje2.innerHTML = `
             Nombre: ${player2.nombre}<br>
@@ -197,6 +183,11 @@ const selectorFighter = (nFighter) => {
             Resistencia: ${player2.resistencia}
         `;
         console.log(player2,player1)
+        setTimeout(()=>{
+            cambiaPantalla(7);
+            //game();
+        },6000);
     }
 } 
 
+//src=`img\${jugador1.nombre}.jpg`
