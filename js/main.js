@@ -191,3 +191,8 @@ const selectorFighter = (nFighter) => {
 } 
 
 //src=`img\${jugador1.nombre}.jpg`
+
+/*
+let divLuchador1 = document.getElementById("iddeldiv");
+divLuchador1.style.src
+*/
