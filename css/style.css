@@ -43,9 +43,8 @@ body {
 }
 
 .containerSeleccionarPlayer {
-    height: 55em;
+    height: 36em;
     width: 80em;
-    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +60,7 @@ body {
 
 .selectPlayer {
     height: 20em;
-    width: 80em;
+    width: 75em;
     background-color: #202124;
     display: flex;
     flex-direction: row;

@@ -17,6 +17,7 @@ audioTitulo.volume = 0.1
 audioTitulo.play()
 screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
 screenTitle.style.backgroundSize = "cover"
+screenTitle.style.backgroundPosition = "center"
 
 //Limpiar registro de la batalla para empezar otra partida
 
@@ -36,9 +37,11 @@ const cambiaPantalla = (cambio) => {
     arrayPantallas = arrayPantallas.filter(valor => !pantallaDeseada.includes(valor));
 
     document.getElementById(pantallaDeseada).style.display = "block";
+    
 
     for (let pantalla of arrayPantallas) {
         document.getElementById(pantalla).style.display = "none";
+        
     }
 
 
@@ -47,6 +50,7 @@ const cambiaPantalla = (cambio) => {
         //Imagen para Pantalla inicio
         screenTitle.style.backgroundImage = "url('assets/img/titulo.png')"
         screenTitle.style.backgroundSize = "cover"
+        screenTitle.style.backgroundPosition = "center"
         audioTitulo.volume = 0.2
         audioTitulo.play()
         setTimeout(function () {
@@ -105,9 +109,19 @@ const cambiaPantalla = (cambio) => {
         audioIntro.play()
         audioIntro.volume = 0.2
         pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
-        pulsaStart.style.backgroundSize = "cover"
+        pulsaStart.style.backgroundSize = "contain"
+        pulsaStart.style.backgroundPosition = "center"
         /*
-        pulsaStart.addEventListener('keydown', cambiaPantalla())*/
+        screen3Tecla.addEventListener("keydown", (ev) => {
+            cambiaPantalla(4);
+        })*/
+
+        document.body.addEventListener("keydown", (ev) => {
+            
+            if (screen3Tecla.style.display == "block"){
+                cambiaPantalla(4)
+            }
+        })
 
         
         //pulsaStart.addEventListener("keydown", cualquierTecla());
