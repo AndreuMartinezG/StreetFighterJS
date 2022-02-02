@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
+    /*font-family: 'Press Start 2P', cursive;*/
     height: 100vh;
     width: 100vw;
 }
@@ -18,8 +18,6 @@ body {
 }
 
 .designScreen3 {
-    background-color: rgb(131, 72, 72);
-
     height: 100vh;
     width: 100vw;
 }
@@ -33,7 +31,6 @@ body {
 
 /*Diseño pantalla 5 - Selecciona personaje 1*/
 .designScreen5 {
-    background-color: tomato;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -55,7 +52,11 @@ body {
 .bandera {
     height: 10em;
     width: 60em;
-    background-color: red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red
 }
 
 .selectPlayer {

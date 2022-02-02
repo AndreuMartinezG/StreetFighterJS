@@ -168,17 +168,12 @@ const cualquierTecla = () => {
 
 const selectorFighter = (nFighter) => {
     
-    let personajePrimero = "";
-    let datosPersonaje = "";
-    let personajeSegundo = "";
-    let datosPersonaje2 = "";
 
     if(player1 == ""){
         player1 = allFighters[nFighter];
-        personajePrimero = document.getElementById(nFighter);
-        datosPersonaje = document.getElementById("estadisticas" + 1);
-        
-        personajePrimero.disabled = true;
+        let personajePrimero = document.getElementById(nFighter);
+        let datosPersonaje = document.getElementById("estadisticas" + 1);
+    
         personajePrimero.classList.add("playerSelected");
         datosPersonaje.innerHTML = `
             Nombre: ${player1.nombre}<br>
@@ -187,17 +182,12 @@ const selectorFighter = (nFighter) => {
             Defensa: ${player1.defensa}<br>
             Resistencia: ${player1.resistencia}
         `;
-        console.log(player1) 
-        console.log(personajePrimero)
 
-    }
-    if (player2 == "") {
-        console.log(personajePrimero)
+    } else if (player2 == "") {
         player2 = allFighters[nFighter];
-        personajeSegundo = document.getElementById(nFighter);
-        datosPersonaje2 = document.getElementById("estadisticas" + 2);
-        
-        personajeSegundo.disabled = true;
+        let personajeSegundo = document.getElementById(nFighter);
+        let datosPersonaje2 = document.getElementById("estadisticas" + 2);
+       console.log(personajeSegundo)
         personajeSegundo.classList.add("playerSelected");
         datosPersonaje2.innerHTML = `
             Nombre: ${player2.nombre}<br>
@@ -206,10 +196,7 @@ const selectorFighter = (nFighter) => {
             Defensa: ${player2.defensa}<br>
             Resistencia: ${player2.resistencia}
         `;
-        console.log(player2,player1) 
-        console.log(personajeSegundo)
-        console.log(personajePrimero)
-        
+        console.log(player2,player1)
     }
 } 
 
