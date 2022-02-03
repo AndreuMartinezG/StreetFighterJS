@@ -85,10 +85,10 @@ const cambiaPantalla = (cambio) => {
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
                     setTimeout(function () {
                         cambiaPantalla(3)
-                    }, 1150)
-                }, 1150)
-            }, 1150)
-        }, 1150);
+                    }, 50)
+                }, 50)
+            }, 50)
+        }, 50);
     }
 
 
