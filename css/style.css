@@ -278,8 +278,8 @@ body {
 
 /* Diseño Batalla */
 .designScreen8 {
-    background-color: lime;
-
+    background-image: url("../assets/img/intro-3.gif");
+    background-size: cover;
     height: 100vh;
     width: 100vw;
 }

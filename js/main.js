@@ -24,9 +24,7 @@ screenTitle.style.backgroundPosition = "center"
 //Limpiar registro de la batalla para empezar otra partida
 
 const cleanGame = () => {
-    player1 = "";
-    player2 = "";
-    ganador = "";
+    window.location.reload();
 }
 
 
@@ -87,10 +85,10 @@ const cambiaPantalla = (cambio) => {
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
                     setTimeout(function () {
                         cambiaPantalla(3)
-                    }, 50)
-                }, 50)
-            }, 50)
-        }, 50);
+                    }, 1150)
+                }, 1150)
+            }, 1150)
+        }, 1150);
     }
 
 
@@ -197,6 +195,10 @@ const displayGame = () => {
     banderaPlayer1.innerHTML = `<img class="banderaPresent" src="assets/img/${player1.pais}.png" alt="primerLuchadorBandera"/>`;
     displayPlayer2.innerHTML = `<img class="foto" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
     banderaPlayer2.innerHTML = `<img class="banderaPresent" src="assets/img/${player2.pais}.png" alt="segundoLuchadorBandera"/>`;
+    setTimeout(() =>{
+        cambiaPantalla(8);
+        //game()
+    },6500)
 }
 
 //Elementos para mostrar los personajes seleccionados
