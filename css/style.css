@@ -289,7 +289,7 @@ body {
 }
 
 .statsDisplay {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.295);
     height: 8em;
     width: 100vw;
     display: flex;
@@ -298,13 +298,13 @@ body {
 }
 
 .battleDisplay {
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.432);
     height: 47em;
     width: 100vw;
 }
 
 .floorDisplay {
-    background-color: hotpink;
+    background-color: rgba(255, 105, 180, 0.479);
     height: 4em;
     width: 100vw;
 }
