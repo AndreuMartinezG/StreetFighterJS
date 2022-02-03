@@ -297,6 +297,7 @@ body {
     justify-content: center;
 }
 
+
 .battleDisplay {
     background-color: rgba(128, 128, 128, 0.432);
     height: 47em;
@@ -310,6 +311,7 @@ body {
 }
 
 
+/* Diseño pantalla vencedor */
 .designScreen9 {
     background-color: red;
 
