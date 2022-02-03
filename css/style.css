@@ -282,7 +282,33 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.statsDisplay {
+    background-color: red;
+    height: 8em;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battleDisplay {
+    background-color: grey;
+    height: 47em;
+    width: 100vw;
+}
+
+.floorDisplay {
+    background-color: hotpink;
+    height: 4em;
+    width: 100vw;
+}
+
 
 .designScreen9 {
     background-color: red;
