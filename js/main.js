@@ -202,7 +202,9 @@ const selectorFighter = (nFighter) => {
 
 const displayGame = () => {
     displayPlayer1.innerHTML = `<img class="foto" src="assets/img/${player1.imgRute}.gif" alt="primerLuchador"/>`;
+    banderaPlayer1.innerHTML = `<img class="banderaPresent" src="assets/img/${player1.pais}.png" alt="primerLuchadorBandera"/>`;
     displayPlayer2.innerHTML = `<img class="foto" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
+    banderaPlayer2.innerHTML = `<img class="banderaPresent" src="assets/img/${player2.pais}.png" alt="segundoLuchadorBandera"/>`;
 }
 
 //Elementos para mostrar los personajes seleccionados

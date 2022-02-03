@@ -188,7 +188,7 @@ body {
 }
 
 .pantallaPresentacionIzq {
-    background-color: aqua;
+
     height: 50em;
     width: 25em;
 }
@@ -208,7 +208,8 @@ body {
 }
 
 .getReady {
-
+    margin-left: 2em;
+    margin-right: 2em;
     height: 50em;
     width: 40em;
 }
@@ -216,20 +217,22 @@ body {
 .getReadyUp{
     height: 15em;
     width: 40em;
+    background-image: url("../assets/img/get-ready.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .getReadyDown {
     height: 15em;
     width: 40em;
 }
 .getReadyCent {
-    height: 20em;
+    height: 15em;
     width: 40em;
-    background-image: url("../assets/img/get-ready.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 .pantallaPresentacionDer {
-    background-color: aqua;
+
     height: 50em;
     width: 25em;
 }
@@ -252,6 +255,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 25em;
+    height: 35em;
+}
+
+.banderaPresent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15em;
+    width: 25em;
 }
 
 /* Diseño Batalla */
