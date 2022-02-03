@@ -52,14 +52,16 @@ body {
 .bandera {
     height: 15em;
     width: 60em;
-
+    margin-bottom: 5em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: red
+    color: red;
+    font-size: 26px;
 }
 
 .selectPlayer {
+    border: 1px solid rgb(121, 54, 54);
     height: 20em;
     width: 75em;
     background-color: #202124;
@@ -163,12 +165,12 @@ body {
 }
 .continuar {
     height: 5em;
-    width: 10em;
-    background-color: grey;
+    width: 20em;
     display: flex;
     align-items: center;
     justify-content: center;
     color: red;
+    margin-top: 2em;
     cursor: pointer;
 }
 .divblanco {
@@ -223,12 +225,19 @@ body {
     background-position: center;
 }
 .getReadyDown {
+
     height: 15em;
     width: 40em;
 }
 .getReadyCent {
+
     height: 15em;
     width: 40em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    
 
 }
 .pantallaPresentacionDer {

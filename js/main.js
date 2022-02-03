@@ -7,6 +7,7 @@ const win = document.getElementById('pagWin')
 const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3')
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
 const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3')
+const audioSelect = new Audio('assets/sounds/characterSelect.mp3')
 const screen3Tecla = document.getElementById('screen3')
 
 
@@ -108,10 +109,6 @@ const cambiaPantalla = (cambio) => {
         pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
         pulsaStart.style.backgroundSize = "contain"
         pulsaStart.style.backgroundPosition = "center"
-        /*
-        screen3Tecla.addEventListener("keydown", (ev) => {
-            cambiaPantalla(4);
-        })*/
 
         document.body.addEventListener("keydown", (ev) => {
 
@@ -119,15 +116,6 @@ const cambiaPantalla = (cambio) => {
                 cambiaPantalla(4)
             }
         })
-
-
-        //pulsaStart.addEventListener("keydown", cualquierTecla());
-
-        /*
-        pulsaStart.onkeydown = function (e) {
-            cambiaPantalla(4)
-        }*/
-
     }
 
 
@@ -139,11 +127,15 @@ const cambiaPantalla = (cambio) => {
 
     if (pantallaDeseada == "screen5") {
         selectPj1.style.backgroundColor = "#202124"
+        audioSelect.volume = 0.2
+        audioSelect.play()
+        audioSelect.loop = true
     }
 
     if (pantallaDeseada == "screen7"){
-        audioNextBattle.play()
+        audioSelect.pause()
         audioNextBattle.volume = 0.2
+        audioNextBattle.play()
         audioNextBattle.loop = false
     }
 
