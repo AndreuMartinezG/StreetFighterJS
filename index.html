@@ -12,22 +12,35 @@
 
 <body>
 
+    <!-- TITULO DEL JUEGO -->
 
     <section id="screen1" name="Inicio" onclick="cambiaPantalla(2)">
         <div class="designScreen1" id="inicio"></div>
     </section>
 
+
+    <!-- Transición inicio Juego-->
+
     <section id="screen2" name="transicionInicio" style="display:none" onclick="cambiaPantalla(3)">
         <div class="designScreen2" id="transicionInicio"></div>
     </section>
+
+
+    <!-- Pulsa cualquier tecla para continuar -->
 
     <section id="screen3" name="pulsaStartInicio" style="display:none">
         <div class="designScreen3" id="pulsaStartInicio"></div>
     </section>
 
+
+    <!-- Controles para Batalla-->
+
     <section id="screen4" name="controles" style="display:none" onclick="cambiaPantalla(5)">
         <div class="designScreen4">controles</div>
     </section>
+
+
+    <!-- Seleccion Personajes -->
 
     <section id="screen5" name="seleccionaPersonaje" style="display:none">
         <div class="designScreen5" id="pj1">
@@ -51,48 +64,42 @@
                     <div class="stats" id="estadisticas2"></div>
                 </div>
                 <div class="stats" id="estadisticas1"></div>
-                <div class="continuar" onclick="cambiaPantalla(7)">Batalla</div>
+                <div class="continuar">Batalla</div>
             </div>
         </div>
     </section>
-    <!--
-    <section id="screen6" name="seleccionaPersonaje2" style="display:none">
-        <div class="designScreen6" id="pj2">
-            <div class="containerSeleccionarPlayer">
-                <div class="bandera">SELECCIONA PLAYER 2</div>
-                <div class="selectPlayer">
-                    <div class="player1 playerChoosing" onclick="selectorFighter(9)" id="9"></div>
-                    <div class="player2 playerChoosing" onclick="selectorFighter(10)" id="10"></div>
-                    <div class="player3 playerChoosing" onclick="selectorFighter(11)" id="11"></div>
-                    <div class="player4 playerChoosing" onclick="selectorFighter(12)" id="12"></div>
-                    <div class="player5 playerChoosing" onclick="selectorFighter(13)" id="13"></div>
-                    <div class="player6 playerChoosing" onclick="selectorFighter(14)" id="14"></div>
-                    <div class="player7 playerChoosing" onclick="selectorFighter(15)" id="15"></div>
-                    <div class="player8 playerChoosing" onclick="selectorFighter(16)" id="16"></div>
-                </div>
-                <div class="stats" id="estadisticas2"></div>
-                <div class="continuar" onclick="cambiaPantalla(7)">Select P2</div>
-            </div>
-        </div>
-    </section>-->
+
+
+    <!-- Presentación Batalla -->
 
     <section id="screen7" name="presentaciónBatalla" style="display:none" onclick="cambiaPantalla(8)">
         <div class="designScreen7">
             <div class="pantallaPresentacionIzq">
-                <div class="banderaPresentacion"></div>
-                <div class="presentacionPlayer1"></div>
+                <div id="banderaPresentacion1"></div>
+                <div id="presentacionPlayer1"></div>
+            </div>
+            <div class="getReady">
+                <div class="getReadyUp"></div>
+                <div class="getReadyCent"></div>
+                <div class="getReadyDown"></div>
             </div>
             <div class="pantallaPresentacionDer">
-                <div class="banderaPresentacion"></div>
-                <div class="presentacionPlayer2"></div>
+                <div id="banderaPresentacion2"></div>
+                <div id="presentacionPlayer2"></div>
             </div>
             
         </div>
     </section>
 
+
+    <!-- Pantalla de Batalla -->
+
     <section id="screen8" name="batalla" style="display:none" onclick="cambiaPantalla(9)">
         <div class="designScreen8">batalla</div>
     </section>
+
+
+    <!-- Pantalla del Ganador -->
 
     <section id="screen9" name="win" style="display:none" onclick="cambiaPantalla(1)">
         <div class="designScreen9" id="pagWin">winsss</div>

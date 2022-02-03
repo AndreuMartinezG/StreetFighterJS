@@ -6,6 +6,7 @@ const selectPj1 = document.getElementById('pj1')
 const win = document.getElementById('pagWin')
 const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3')
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
+const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3')
 const screen3Tecla = document.getElementById('screen3')
 
 
@@ -37,11 +38,11 @@ const cambiaPantalla = (cambio) => {
     arrayPantallas = arrayPantallas.filter(valor => !pantallaDeseada.includes(valor));
 
     document.getElementById(pantallaDeseada).style.display = "block";
-    
+
 
     for (let pantalla of arrayPantallas) {
         document.getElementById(pantalla).style.display = "none";
-        
+
     }
 
 
@@ -85,10 +86,10 @@ const cambiaPantalla = (cambio) => {
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
                     setTimeout(function () {
                         cambiaPantalla(3)
-                    }, 3750)
-                }, 3750)
-            }, 3750)
-        }, 3750);
+                    }, 50)
+                }, 50)
+            }, 50)
+        }, 50);
     }
 
 
@@ -113,20 +114,20 @@ const cambiaPantalla = (cambio) => {
         })*/
 
         document.body.addEventListener("keydown", (ev) => {
-            
-            if (screen3Tecla.style.display == "block"){
+
+            if (screen3Tecla.style.display == "block") {
                 cambiaPantalla(4)
             }
         })
 
-        
+
         //pulsaStart.addEventListener("keydown", cualquierTecla());
-        
+
         /*
         pulsaStart.onkeydown = function (e) {
             cambiaPantalla(4)
         }*/
-        
+
     }
 
 
@@ -136,9 +137,16 @@ const cambiaPantalla = (cambio) => {
     }
 
 
-    if (pantallaDeseada =="screen5") {
+    if (pantallaDeseada == "screen5") {
         selectPj1.style.backgroundColor = "#202124"
     }
+
+    if (pantallaDeseada == "screen7"){
+        audioNextBattle.play()
+        audioNextBattle.volume = 0.2
+        audioNextBattle.loop = false
+    }
+
 
     //Pantalla WIN
     if (pantallaDeseada == "screen9") {
@@ -153,9 +161,9 @@ const cambiaPantalla = (cambio) => {
 //Funcion para seleccionar Personaje
 
 const selectorFighter = (nFighter) => {
-    
 
-    if(player1 == ""){
+
+    if (player1 == "") {
         player1 = allFighters[nFighter];
         let personajePrimero = document.getElementById(nFighter);
         let datosPersonaje = document.getElementById("estadisticas" + 1);
@@ -182,13 +190,28 @@ const selectorFighter = (nFighter) => {
             Defensa: ${player2.defensa}<br>
             Resistencia: ${player2.resistencia}
         `;
-        console.log(player2,player1)
-        setTimeout(()=>{
+        console.log(player2, player1)
+        setTimeout(() => {
             cambiaPantalla(7);
-            //game();
-        },6000);
+            displayGame();
+        }, 4000);
     }
-} 
+}
+
+//Funcion para Mostrar personajes elejidos
+
+const displayGame = () => {
+    displayPlayer1.innerHTML = `<img class="foto" src="assets/img/${player1.imgRute}.gif" alt="primerLuchador"/>`;
+    displayPlayer2.innerHTML = `<img class="foto" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
+}
+
+//Elementos para mostrar los personajes seleccionados
+
+let displayPlayer1 = document.getElementById("presentacionPlayer1");
+let displayPlayer2 = document.getElementById("presentacionPlayer2");
+let banderaPlayer1 = document.getElementById("banderaPresentacion1");
+let banderaPlayer2 = document.getElementById("banderaPresentacion2");
+
 
 //src=`img\${jugador1.nombre}.jpg`
 
