@@ -210,13 +210,18 @@ let banderaPlayer1 = document.getElementById("banderaPresentacion1");
 let banderaPlayer2 = document.getElementById("banderaPresentacion2");
 let presentacionNameP1 = document.getElementById("divNameP1");
 let presentacionNameP2 = document.getElementById("divNameP2");
-let nombreBatallaP1 = document.getElementById("nombrePlayer1")
-let nombreBatallaP2 = document.getElementById("nombrePlayer2")
+let nombreBatallaP1 = document.getElementById("nombrePlayer1");
+let nombreBatallaP2 = document.getElementById("nombrePlayer2");
+let posicionBatallaP1 = document.getElementById("batallaJugador1");
+let posicionBatallaP2 = document.getElementById("batallaJugador2");
 
 
 const game = () => {
     nombreBatallaP1.innerHTML = `${player1.nombre}`
     nombreBatallaP2.innerHTML = `${player2.nombre}`
+    posicionBatallaP1.innerHTML = `<img class="foto" style="width:auto;height:20em" src="assets/img/${player1.imgRute}.gif" alt="primerLuchador"/>`;
+    posicionBatallaP2.innerHTML = `<img class="foto" style="width:auto;height:20em" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
+
 }
 
 // Funcion de Batalla

@@ -375,6 +375,33 @@ body {
     background-color: rgba(128, 128, 128, 0.432);
     height: 47em;
     width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#batallaJugador1 {
+    width: 20em;
+    height: 20em;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.batallaEspacioDiv {
+    width: 20em;
+    height: 20em;
+    background-color: white;
+}
+
+#batallaJugador2 {
+    width: 20em;
+    height: 20em;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .floorDisplay {
