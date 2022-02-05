@@ -1,18 +1,18 @@
 class Luchador {
 
-    constructor(nombre, vida, ataque, defensa, resistencia, pais, imgRute, imgRuteReve) {
+    constructor(nombre, vida, ataque, defensa, suerte, pais, imgRute, imgRuteReve) {
         this.nombre = nombre;
         this.vida = vida;
         this.ataque = ataque;
         this.defensa = defensa;
-        this.resistencia = resistencia;
+        this.suerte = suerte;
         this.pais = pais;
         this.imgRute = imgRute;
         this.imgRuteReve = imgRuteReve;
     }
 
     pegar() {
-        return this.vida -= this.ataque
+       return this.vida-=Math.round(this.ataque - (this.defensa/((Math.random()*this.suerte)+1)));
     }
 
     defender() {

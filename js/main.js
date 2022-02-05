@@ -170,7 +170,7 @@ const selectorFighter = (nFighter) => {
             Vida: ${player1.vida}<br>
             Ataque: ${player1.ataque}<br>
             Defensa: ${player1.defensa}<br>
-            Resistencia: ${player1.resistencia}
+            Resistencia: ${player1.suerte}
         `;
 
     } else if (player2 == "") {
@@ -184,7 +184,7 @@ const selectorFighter = (nFighter) => {
             Vida: ${player2.vida}<br>
             Ataque: ${player2.ataque}<br>
             Defensa: ${player2.defensa}<br>
-            Resistencia: ${player2.resistencia}
+            Resistencia: ${player2.suerte}
         `;
         console.log(player2, player1)
         setTimeout(() => {
@@ -234,34 +234,55 @@ const game = () => {
 
 const hit = () => {
 
-    winer()
+    
+    
     player1.pegar();
-
     player2.pegar();
-
-
+    contadorVida()
+    winer()
     console.log(`${player1.vida} ${player1.nombre}`)
     console.log(`${player2.vida} ${player2.nombre}`)
 }
 
 
+//Funcion para actualizar la vida
 
+const contadorVida = () => {
+    if ((player1.vida > 0 ) && (player2.vida > 0 )) {
+        let vidaPlayer1 = player1.vida;
+        let vidaPlayer2 = player2.vida;
+            vidaPlayer1 = (vidaPlayer1 * 100)/300;
+            document.getElementById("barraVidaIzq").style.width = vidaPlayer1+"%";
+            vidaPlayer2 = (vidaPlayer2 * 100)/300;
+            document.getElementById("barraVidaDer").style.width = vidaPlayer2+"%";
+    } else if (player1.vida <= 0) {
+        document.getElementById("barraVidaIzq").style.width = 0;
+    } else {
+        document.getElementById("barraVidaDer").style.width = 0;
+    }
+}
+
+
+// Funcion para ver si alguno a ganado
 const winer = () => {
-    if (player1.vida <= 0) {
+    if (player1.vida <= vidaMuerte) {
 
         ganador = player1;
-
-        cambiaPantalla(9);
         console.log(`${player1.nombre}`)
-        //winner.innerHTML = `${player1.nombre}`;
+        setTimeout(() => {
+            cambiaPantalla(9);
+            mostrarGanador();
+        }, 3500)
 
-    } else if (player1.vida <= 0) {
+    }
+    if (player2.vida <= vidaMuerte) {
 
         ganador = player2;
-
-        cambiaPantalla(9);
         console.log(`${player2.nombre}`)
-        //winner.innerHTML = `${player2.nombre}`;
+        setTimeout(() => {
+            cambiaPantalla(9);
+            mostrarGanador();
+        }, 3500)
     } 
 }
 

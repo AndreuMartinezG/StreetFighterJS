@@ -289,7 +289,6 @@ body {
 }
 
 .statsDisplay {
-    background-color: rgba(255, 0, 0, 0.295);
     height: 10em;
     width: 100vw;
     display: flex;
@@ -372,7 +371,7 @@ body {
 }
 
 .battleDisplay {
-    background-color: rgba(128, 128, 128, 0.432);
+
     height: 47em;
     width: 100vw;
     display: flex;
@@ -405,7 +404,7 @@ body {
 }
 
 .floorDisplay {
-    background-color: rgba(255, 105, 180, 0.479);
+    
     height: 4em;
     width: 100vw;
     display: flex;
