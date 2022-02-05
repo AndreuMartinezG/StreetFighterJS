@@ -1,6 +1,6 @@
 class Luchador {
 
-    constructor(nombre, vida, ataque, defensa, resistencia, pais, imgRute) {
+    constructor(nombre, vida, ataque, defensa, resistencia, pais, imgRute, imgRuteReve) {
         this.nombre = nombre;
         this.vida = vida;
         this.ataque = ataque;
@@ -8,6 +8,7 @@ class Luchador {
         this.resistencia = resistencia;
         this.pais = pais;
         this.imgRute = imgRute;
+        this.imgRuteReve = imgRuteReve;
     }
 
     pegar() {
@@ -22,14 +23,14 @@ class Luchador {
 
 //Instanciando luchadores
 
-let luchador1 = new Luchador("Ryu",300,10,10,10,"Japon", "ryuSelect");
-let luchador2 = new Luchador("Ken",300,20,10,10,"EEUU", "kenSelect");
-let luchador3 = new Luchador("Chun-Li",300,20,10,10,"China", "chunLiSelect");
-let luchador4 = new Luchador("Guile",300,20,10,10,"EEUU", "guileSelect");
-let luchador5 = new Luchador("Blanka",300,20,10,10,"Brasil", "blankaSelect");
-let luchador6 = new Luchador("E.Honda",300,20,10,10,"Japon", "eHondaSelect");
-let luchador7 = new Luchador("Zangief",300,20,10,10,"URSS", "zangiefSelect");
-let luchador8 = new Luchador("Dhalsim",300,20,10,10,"India", "dhalsimSelect");
+let luchador1 = new Luchador("Ryu",300,10,10,10,"Japon", "ryuSelect", "ryuSelectReve");
+let luchador2 = new Luchador("Ken",300,20,10,10,"EEUU", "kenSelect", "kenSelectReve");
+let luchador3 = new Luchador("Chun-Li",300,20,10,10,"China", "chunLiSelect", "chunLiSelectReve");
+let luchador4 = new Luchador("Guile",300,20,10,10,"EEUU", "guileSelect", "guileSelectReve");
+let luchador5 = new Luchador("Blanka",300,20,10,10,"Brasil", "blankaSelect", "blankaSelectReve");
+let luchador6 = new Luchador("E.Honda",300,20,10,10,"Japon", "eHondaSelect", "eHondaSelectReve");
+let luchador7 = new Luchador("Zangief",300,20,10,10,"URSS", "zangiefSelect", "zangiefSelectReve");
+let luchador8 = new Luchador("Dhalsim",300,20,10,10,"India", "dhalsimSelect", "dhalsimSelectReve");
 
 
 //Generacion de diccionario de los Luchadores
