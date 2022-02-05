@@ -237,9 +237,9 @@ body {
     align-items: center;
     justify-content: center;
     color: red;
-    
-
 }
+
+
 .pantallaPresentacionDer {
 
     height: 50em;
@@ -308,6 +308,15 @@ body {
     background-color: rgba(255, 105, 180, 0.479);
     height: 4em;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonPegar {
+    height: 3em;
+    width: 5em;
+    background-color: red;
 }
 
 

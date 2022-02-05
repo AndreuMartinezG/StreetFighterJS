@@ -1,14 +1,14 @@
 const screenTitle = document.getElementById('inicio');
-const transicionInicio = document.getElementById('transicionInicio')
-const pulsaStart = document.getElementById('pulsaStartInicio')
-const selectPj1 = document.getElementById('pj1')
+const transicionInicio = document.getElementById('transicionInicio');
+const pulsaStart = document.getElementById('pulsaStartInicio');
+const selectPj1 = document.getElementById('pj1');
 
-const win = document.getElementById('pagWin')
-const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3')
-const audioIntro = new Audio('assets/sounds/street-fighter.mp3')
-const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3')
-const audioSelect = new Audio('assets/sounds/characterSelect.mp3')
-const screen3Tecla = document.getElementById('screen3')
+const win = document.getElementById('pagWin');
+const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3');
+const audioIntro = new Audio('assets/sounds/street-fighter.mp3');
+const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3');
+const audioSelect = new Audio('assets/sounds/characterSelect.mp3');
+const screen3Tecla = document.getElementById('screen3');
 
 
 // Funciones 
@@ -28,7 +28,7 @@ const cleanGame = () => {
 }
 
 
-//Cambios de pantalla
+//Cambios de pantalla y Diseño
 const cambiaPantalla = (cambio) => {
 
     let pantallaDeseada = "screen" + cambio;
@@ -105,7 +105,7 @@ const cambiaPantalla = (cambio) => {
         audioIntro.play()
         audioIntro.volume = 0.2
         pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
-        pulsaStart.style.backgroundSize = "contain"
+        pulsaStart.style.backgroundSize = "cover"
         pulsaStart.style.backgroundPosition = "center"
 
         document.body.addEventListener("keydown", (ev) => {
@@ -130,7 +130,7 @@ const cambiaPantalla = (cambio) => {
         audioSelect.loop = true
     }
 
-    if (pantallaDeseada == "screen7"){
+    if (pantallaDeseada == "screen7") {
         audioSelect.pause()
         audioNextBattle.volume = 0.2
         audioNextBattle.play()
@@ -146,7 +146,6 @@ const cambiaPantalla = (cambio) => {
     }
 }
 
-//Funcion para detectar pulsacion de cualquier tecla en Pulsa Start para continuar
 
 //Funcion para seleccionar Personaje
 
@@ -193,12 +192,14 @@ const selectorFighter = (nFighter) => {
 const displayGame = () => {
     displayPlayer1.innerHTML = `<img class="foto" src="assets/img/${player1.imgRute}.gif" alt="primerLuchador"/>`;
     banderaPlayer1.innerHTML = `<img class="banderaPresent" src="assets/img/${player1.pais}.png" alt="primerLuchadorBandera"/>`;
+    //presentacionNameP1.innerHTML = `${player1.nombre} VS ${player2.nombre}`
     displayPlayer2.innerHTML = `<img class="foto" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
     banderaPlayer2.innerHTML = `<img class="banderaPresent" src="assets/img/${player2.pais}.png" alt="segundoLuchadorBandera"/>`;
-    setTimeout(() =>{
+    //presentacionNameP2.innerHTML = `${player2.nombre}`
+    setTimeout(() => {
         cambiaPantalla(8);
         //game()
-    },6500)
+    }, 6500)
 }
 
 //Elementos para mostrar los personajes seleccionados
@@ -207,7 +208,40 @@ let displayPlayer1 = document.getElementById("presentacionPlayer1");
 let displayPlayer2 = document.getElementById("presentacionPlayer2");
 let banderaPlayer1 = document.getElementById("banderaPresentacion1");
 let banderaPlayer2 = document.getElementById("banderaPresentacion2");
+let presentacionNameP1 = document.getElementById("divNameP1");
+let presentacionNameP2 = document.getElementById('divNameP2');
 
+
+// Funcion de Batalla
+
+const hit = () => {
+
+    if (player1.vida <= vidaMuerte) {
+
+        ganador = player1;
+
+        cambiaPantalla(9);
+        console.log(`${player1.nombre}`)
+        //winner.innerHTML = `${player1.nombre}`;
+
+    } else if (player1.vida <= vidaMuerte) {
+
+        ganador = player2;
+
+        cambiaPantalla(9);
+        console.log(`${player2.nombre}`)
+        //winner.innerHTML = `${player2.nombre}`;
+    } else {
+
+    player1.pegar();
+
+    player2.pegar();
+
+
+    console.log(`${player1.vida} ${player1.nombre}`)
+    console.log(`${player2.vida} ${player2.nombre}`)
+    }
+}
 
 //src=`img\${jugador1.nombre}.jpg`
 
