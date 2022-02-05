@@ -8,6 +8,7 @@ const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3');
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3');
 const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3');
 const audioSelect = new Audio('assets/sounds/characterSelect.mp3');
+const audioBattle = new Audio('assets/sounds/battle.mp3')
 const screen3Tecla = document.getElementById('screen3');
 
 
@@ -137,9 +138,15 @@ const cambiaPantalla = (cambio) => {
         audioNextBattle.loop = false
     }
 
-
+    if (pantallaDeseada == "screen8") {
+        audioNextBattle.pause()
+        audioBattle.volume = 0.2
+        audioBattle.play()
+        audioBattle.loop = true
+    }
     //Pantalla WIN
     if (pantallaDeseada == "screen9") {
+        audioBattle.pause()
         win.style.backgroundImage = "url('assets/img/you-win.png')"
         win.style.backgroundSize = "cover"
 
@@ -193,7 +200,7 @@ const displayGame = () => {
     displayPlayer1.innerHTML = `<img class="foto" src="assets/img/${player1.imgRute}.gif" alt="primerLuchador"/>`;
     banderaPlayer1.innerHTML = `<img class="banderaPresent" src="assets/img/${player1.pais}.png" alt="primerLuchadorBandera"/>`;
     //presentacionNameP1.innerHTML = `${player1.nombre} VS ${player2.nombre}`
-    displayPlayer2.innerHTML = `<img class="foto" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
+    displayPlayer2.innerHTML = `<img class="foto" src="assets/img/${player2.imgRuteReve}.gif" alt="segundoluchador"/>`;
     banderaPlayer2.innerHTML = `<img class="banderaPresent" src="assets/img/${player2.pais}.png" alt="segundoLuchadorBandera"/>`;
     //presentacionNameP2.innerHTML = `${player2.nombre}`
     setTimeout(() => {
@@ -220,8 +227,7 @@ const game = () => {
     nombreBatallaP1.innerHTML = `${player1.nombre}`
     nombreBatallaP2.innerHTML = `${player2.nombre}`
     posicionBatallaP1.innerHTML = `<img class="foto" style="width:auto;height:20em" src="assets/img/${player1.imgRute}.gif" alt="primerLuchador"/>`;
-    posicionBatallaP2.innerHTML = `<img class="foto" style="width:auto;height:20em" src="assets/img/${player2.imgRute}.gif" alt="segundoluchador"/>`;
-
+    posicionBatallaP2.innerHTML = `<img class="foto" style="width:auto;height:20em" src="assets/img/${player2.imgRuteReve}.gif" alt="segundoluchador"/>`;
 }
 
 // Funcion de Batalla
