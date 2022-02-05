@@ -198,7 +198,7 @@ const displayGame = () => {
     //presentacionNameP2.innerHTML = `${player2.nombre}`
     setTimeout(() => {
         cambiaPantalla(8);
-        //game()
+        game()
     }, 6500)
 }
 
@@ -209,30 +209,21 @@ let displayPlayer2 = document.getElementById("presentacionPlayer2");
 let banderaPlayer1 = document.getElementById("banderaPresentacion1");
 let banderaPlayer2 = document.getElementById("banderaPresentacion2");
 let presentacionNameP1 = document.getElementById("divNameP1");
-let presentacionNameP2 = document.getElementById('divNameP2');
+let presentacionNameP2 = document.getElementById("divNameP2");
+let nombreBatallaP1 = document.getElementById("nombrePlayer1")
+let nombreBatallaP2 = document.getElementById("nombrePlayer1")
 
+
+const game = () => {
+    nombreBatallaP1.innerHTML = `${player1.nombre}`
+    nombreBatallaP2.innerHTML = `${player2.nombre}`
+}
 
 // Funcion de Batalla
 
 const hit = () => {
 
-    if (player1.vida <= vidaMuerte) {
-
-        ganador = player1;
-
-        cambiaPantalla(9);
-        console.log(`${player1.nombre}`)
-        //winner.innerHTML = `${player1.nombre}`;
-
-    } else if (player1.vida <= vidaMuerte) {
-
-        ganador = player2;
-
-        cambiaPantalla(9);
-        console.log(`${player2.nombre}`)
-        //winner.innerHTML = `${player2.nombre}`;
-    } else {
-
+    winer()
     player1.pegar();
 
     player2.pegar();
@@ -240,8 +231,30 @@ const hit = () => {
 
     console.log(`${player1.vida} ${player1.nombre}`)
     console.log(`${player2.vida} ${player2.nombre}`)
-    }
 }
+
+
+
+const winer = () => {
+    if (player1.vida <= 0) {
+
+        ganador = player1;
+
+        cambiaPantalla(9);
+        console.log(`${player1.nombre}`)
+        //winner.innerHTML = `${player1.nombre}`;
+
+    } else if (player1.vida <= 0) {
+
+        ganador = player2;
+
+        cambiaPantalla(9);
+        console.log(`${player2.nombre}`)
+        //winner.innerHTML = `${player2.nombre}`;
+    } 
+}
+
+
 
 //src=`img\${jugador1.nombre}.jpg`
 

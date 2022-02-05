@@ -98,20 +98,20 @@
         <div class="designScreen8">
             <div class="statsDisplay">
                 <div class="izq">
-                    <div id="vidaIzq" class="barraVida">
-                        <div id="barraVidaIzq" class="barraVidaLlena"></div>
+                    <div id="vidaIzq" class="barraVidaIzqFondo">
+                        <div id="barraVidaIzq"></div>
                     </div>
-                    <div class="nombrePlayer1"></div>
+                    <div id="nombrePlayer1"></div>
                 </div>
                 <div class="centro">
-                    <div class="KO"></div>
+                    <div class="KO">KO</div>
                     <div class="time"></div>
                 </div>
                 <div class="der">
-                    <div id="vidaDer" class="barraVida">
+                    <div id="vidaDer" class="barraVidaDerFondo">
                         <div id="barraVidaDer" class="barraVidaLlena"></div>
                     </div>
-                    <div class="nombrePlayer2"></div>
+                    <div id="nombrePlayer2"></div>
                 </div>
 
             </div>
@@ -123,7 +123,7 @@
 
     <!-- Pantalla del Ganador -->
 
-    <section id="screen9" name="win" style="display:none" onclick="cambiaPantalla(1)">
+    <section id="screen9" name="win" style="display:none" onclick="cleanGame()">
         <div class="designScreen9" id="pagWin">winsss</div>
     </section>
 
