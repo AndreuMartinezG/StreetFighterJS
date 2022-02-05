@@ -290,7 +290,7 @@ body {
 
 .statsDisplay {
     background-color: rgba(255, 0, 0, 0.295);
-    height: 8em;
+    height: 10em;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -324,21 +324,24 @@ body {
     color: red;
     height: 2em;
     width: 6em;
-    margin-left: 34em;
+    margin-left: 33em;
 }
 
 .KO {
     background-color: black;
     color: red;
     border: 5px solid white;
-    height: 2.2em;
+    height: 1.2em;
     width: 2.5em;
     border-radius: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
+
 }
+
+
 
 .barraVidaDerFondo {
     display: flex;
