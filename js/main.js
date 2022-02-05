@@ -211,7 +211,7 @@ let banderaPlayer2 = document.getElementById("banderaPresentacion2");
 let presentacionNameP1 = document.getElementById("divNameP1");
 let presentacionNameP2 = document.getElementById("divNameP2");
 let nombreBatallaP1 = document.getElementById("nombrePlayer1")
-let nombreBatallaP2 = document.getElementById("nombrePlayer1")
+let nombreBatallaP2 = document.getElementById("nombrePlayer2")
 
 
 const game = () => {
