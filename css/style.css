@@ -371,7 +371,7 @@ body {
     transition: width 0.8s;
 }
 
-.battleDisplay {
+#battleDisplay {
  
 
     height: 47em;
@@ -382,6 +382,8 @@ body {
 }
 
 #batallaJugador1 {
+    
+    
     width: 20em;
     height: 20em;
 
@@ -397,7 +399,7 @@ body {
 }
 
 #batallaJugador2 {
-
+  
     width: 20em;
     height: 20em;
 

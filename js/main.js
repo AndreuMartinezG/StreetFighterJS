@@ -12,11 +12,20 @@ const screen3Tecla = document.getElementById('screen3');
 
 
 // Elementos para la eleccion de Mapa
-
+// Id de donde esta la Pantalla de Batalla
 let mapaBatalla = document.getElementById('mapaBatallaResult')
 
+/*const mapa1 = () => {
+    mapaBatalla = 
+}
 
+const mapa2 = () => {
 
+}
+
+const mapaBatallaSelected = () => {
+
+}*/
 // Funciones 
 
 
@@ -211,6 +220,7 @@ const displayGame = () => {
     setTimeout(() => {
         cambiaPantalla(8);
         game()
+        mapaBatallaSelected()
     }, 6500)
 }
 
@@ -240,8 +250,31 @@ const hit = () => {
 
 
 
-    player1.pegar();
+    let P1 = player1.pegar();
     player2.pegar();
+    let pantallaDeLaBatalla = document.getElementById('battleDisplay')
+    switch (P1) {
+        case 1:
+            pantallaDeLaBatalla.style.justifyContent = "flex-start"
+            posicionBatallaP1.style.width = ""
+            posicionBatallaP2.style.width = ""
+            break
+
+        case 2:
+            pantallaDeLaBatalla.style.justifyContent = "center"
+            posicionBatallaP1.style.width = "5em"
+            break
+
+        case 3:
+            pantallaDeLaBatalla.style.justifyContent = "flex-end"
+            posicionBatallaP1.style.width = "10em"
+            posicionBatallaP2.style.width = "20em"
+            break
+        default:
+            console.log(P1)
+    }
+
+
     contadorVida()
     winer()
     console.log(`${player1.vida} ${player1.nombre}`)

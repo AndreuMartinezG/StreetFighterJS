@@ -12,37 +12,36 @@ class Luchador {
     }
 
     pegar() {
-       return this.vida-=Math.round(this.ataque - (this.defensa/((Math.random()*this.suerte)+1)));
-    }
+        let random = Math.round(this.ataque - (this.defensa / ((Math.random() * this.suerte) + 1)));
 
-    defender() {
-        return this.defensa = this.resistencia + this.defensa;
-    }
+        this.vida -= random;
+        return Math.round(Math.random() * (3 - 1) + 1);
 
+    }
 };
 
 //Instanciando luchadores
 
-let luchador1 = new Luchador("Ryu",300,10,10,10,"Japon", "ryuSelect", "ryuSelectReve");
-let luchador2 = new Luchador("Ken",300,20,10,10,"EEUU", "kenSelect", "kenSelectReve");
-let luchador3 = new Luchador("Chun-Li",300,20,10,10,"China", "chunLiSelect", "chunLiSelectReve");
-let luchador4 = new Luchador("Guile",300,20,10,10,"EEUU", "guileSelect", "guileSelectReve");
-let luchador5 = new Luchador("Blanka",300,20,10,10,"Brasil", "blankaSelect", "blankaSelectReve");
-let luchador6 = new Luchador("E.Honda",300,20,10,10,"Japon", "eHondaSelect", "eHondaSelectReve");
-let luchador7 = new Luchador("Zangief",300,20,10,10,"URSS", "zangiefSelect", "zangiefSelectReve");
-let luchador8 = new Luchador("Dhalsim",300,20,10,10,"India", "dhalsimSelect", "dhalsimSelectReve");
+let luchador1 = new Luchador("Ryu", 300, 10, 10, 10, "Japon", "ryuSelect", "ryuSelectReve");
+let luchador2 = new Luchador("Ken", 300, 20, 10, 10, "EEUU", "kenSelect", "kenSelectReve");
+let luchador3 = new Luchador("Chun-Li", 300, 20, 10, 10, "China", "chunLiSelect", "chunLiSelectReve");
+let luchador4 = new Luchador("Guile", 300, 20, 10, 10, "EEUU", "guileSelect", "guileSelectReve");
+let luchador5 = new Luchador("Blanka", 300, 20, 10, 10, "Brasil", "blankaSelect", "blankaSelectReve");
+let luchador6 = new Luchador("E.Honda", 300, 20, 10, 10, "Japon", "eHondaSelect", "eHondaSelectReve");
+let luchador7 = new Luchador("Zangief", 300, 20, 10, 10, "URSS", "zangiefSelect", "zangiefSelectReve");
+let luchador8 = new Luchador("Dhalsim", 300, 20, 10, 10, "India", "dhalsimSelect", "dhalsimSelectReve");
 
 
 //Generacion de diccionario de los Luchadores
 let allFighters = {
-    1 : luchador1,
-    2 : luchador2,
-    3 : luchador3,
-    4 : luchador4,
-    5 : luchador5,
-    6 : luchador6,
-    7 : luchador7,
-    8 : luchador8,
+    1: luchador1,
+    2: luchador2,
+    3: luchador3,
+    4: luchador4,
+    5: luchador5,
+    6: luchador6,
+    7: luchador7,
+    8: luchador8,
 
 };
 
