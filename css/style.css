@@ -513,12 +513,17 @@ body {
     background-color: salmon;
     height: 5em;
     width: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #imgWin {
     background-color: seagreen;
     height: 30em;
     width: 20em;
+    margin-top: 1em;
 }
 
 .clickToRestart {
