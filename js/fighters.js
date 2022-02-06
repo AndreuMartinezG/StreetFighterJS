@@ -22,7 +22,7 @@ class Luchador {
 
 //Instanciando luchadores
 
-let luchador1 = new Luchador("Ryu", 300, 10, 10, 10, "Japon", "ryuSelect", "ryuSelectReve");
+let luchador1 = new Luchador("Ryu", 300, 20, 10, 10, "Japon", "ryuSelect", "ryuSelectReve");
 let luchador2 = new Luchador("Ken", 300, 20, 10, 10, "EEUU", "kenSelect", "kenSelectReve");
 let luchador3 = new Luchador("Chun-Li", 300, 20, 10, 10, "China", "chunLiSelect", "chunLiSelectReve");
 let luchador4 = new Luchador("Guile", 300, 20, 10, 10, "EEUU", "guileSelect", "guileSelectReve");

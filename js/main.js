@@ -21,6 +21,9 @@ let mapaBatalla2 = document.getElementById("mapa2")
 let mapaBatalla3 = document.getElementById("mapa3")
 let mapaBatalla4 = document.getElementById("mapa4")
 
+
+
+
 const mapa1 = () => {
     mapaBatallaElejido = "url('assets/img/intro-1.gif')"
     mapaBatalla1.classList.add("playerSelected");
