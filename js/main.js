@@ -15,17 +15,14 @@ const screen3Tecla = document.getElementById('screen3');
 // Id de donde esta la Pantalla de Batalla
 let mapaBatalla = document.getElementById('mapaBatallaResult')
 
-/*const mapa1 = () => {
-    mapaBatalla = 
-}
 
-const mapa2 = () => {
-
-}
-
+/*
 const mapaBatallaSelected = () => {
 
+    switch
 }*/
+
+
 // Funciones 
 
 

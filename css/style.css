@@ -22,12 +22,44 @@ body {
     width: 100vw;
 }
 
+
+
+/* Diseño seleccion de mapa */
+
+
 .designScreen4 {
     background-color:aqua;
     height: 100vh;
     width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
 }
 
+.mapa1, .mapa2, .mapa3, .mapa4 {
+    width: 35em;
+    height: 20em;
+
+}
+
+.mapa1 {
+    background-color: burlywood;
+}
+
+.mapa2 {
+    background-color: chartreuse;
+}
+
+.mapa3 {
+    background-color: black
+}
+
+.mapa4 {
+    background-color: brown;
+}
 
 /*Diseño pantalla 5 - Selecciona personaje 1 y 2*/
 .designScreen5 {
