@@ -136,13 +136,14 @@
 
     <!-- Pantalla del Ganador -->
 
-    <section id="screen9" name="win" style="display:none" onclick="cleanGame()">
+    <section id="screen9" name="win" style="display:none">
         <div class="designScreen9" id="pagWin">
             <div class="winContainer">
-                <div class="tituloWin"></div>
+                <div class="tituloWin">The Winer is:</div>
                 <div id="playerWin">
                     <div id="nombreWin"></div>
                     <div id="imgWin"></div>
+                    <div class="clickToRestart" onclick="cleanGame()"></div>
                 </div>
             </div>
         </div>

@@ -194,9 +194,9 @@ const cambiaPantalla = (cambio) => {
     //Pantalla WIN
     if (pantallaDeseada == "screen9") {
         audioBattle.pause()
-        win.style.backgroundImage = "url('assets/img/you-win.png')"
-        win.style.backgroundSize = "cover"
-
+        audioWin.volume = 0.2
+        audioWin.play()
+        win.style.backgroundColor = "#202124"
     }
 }
 
