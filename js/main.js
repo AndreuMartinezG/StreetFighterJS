@@ -8,6 +8,7 @@ const audioIntro = new Audio('assets/sounds/street-fighter.mp3');
 const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3');
 const audioSelect = new Audio('assets/sounds/characterSelect.mp3');
 const audioBattle = new Audio('assets/sounds/battle.mp3')
+const audioHit = new Audio('assets/sounds/hit.mp3')
 const screen3Tecla = document.getElementById('screen3');
 
 
@@ -116,8 +117,8 @@ const cambiaPantalla = (cambio) => {
 
     if (pantallaDeseada == "screen2") {
         audioTitulo.pause()
-        audioIntro.play()
         audioIntro.volume = 0.2
+        audioIntro.play()
         audioIntro.loop = true
         transicionInicio.style.backgroundImage = "url('assets/img/intro-1.gif')";
         transicionInicio.style.backgroundSize = "cover"
@@ -152,8 +153,8 @@ const cambiaPantalla = (cambio) => {
         clearTimeout(transicion4)
         */
         transicion1 = "";
-        audioIntro.play()
         audioIntro.volume = 0.2
+        audioIntro.play()
         pulsaStart.style.backgroundImage = "url('assets/img/press_start.png')"
         pulsaStart.style.backgroundSize = "cover"
         pulsaStart.style.backgroundPosition = "center"
@@ -170,14 +171,15 @@ const cambiaPantalla = (cambio) => {
     //Pantalla Controles
     if (pantallaDeseada == "screen4") {
         audioIntro.pause()
+        audioSelect.volume = 0.2
+        audioSelect.play()
+        audioSelect.loop = true
     }
 
 
     if (pantallaDeseada == "screen5") {
         selectPj1.style.backgroundColor = "#202124"
-        audioSelect.volume = 0.2
-        audioSelect.play()
-        audioSelect.loop = true
+        
     }
 
     if (pantallaDeseada == "screen7") {
@@ -283,8 +285,8 @@ const game = () => {
 
 const hit = () => {
 
-
-
+    audioHit.volume = 0.1
+    audioHit.play()
     let P1 = player1.pegar();
     player2.pegar();
     let pantallaDeLaBatalla = document.getElementById('battleDisplay')
