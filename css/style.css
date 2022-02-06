@@ -40,34 +40,34 @@ body {
 
 }
 
-.mapa1, .mapa2, .mapa3, .mapa4 {
+#mapa1, #mapa2, #mapa3, #mapa4 {
     width: 35em;
     height: 20em;
 
 }
 
-.mapa1 {
+#mapa1 {
     background-image: url("../assets/img/intro-1.gif");
     background-size: cover;
     border: 1px solid red;
     cursor: pointer;
 }
 
-.mapa2 {
+#mapa2 {
     background-image: url("../assets/img/intro-2.gif");
     background-size: cover;
     border: 1px solid red;
     cursor: pointer;
 }
 
-.mapa3 {
+#mapa3 {
     background-image: url("../assets/img/intro-3.gif");
     background-size: cover;
     border: 1px solid red;
     cursor: pointer;
 }
 
-.mapa4 {
+#mapa4 {
     background-image: url("../assets/img/intro-4.gif");
     background-size: cover;
     border: 1px solid red;

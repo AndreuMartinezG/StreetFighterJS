@@ -14,13 +14,51 @@ const screen3Tecla = document.getElementById('screen3');
 // Elementos para la eleccion de Mapa
 // Id de donde esta la Pantalla de Batalla
 let mapaBatalla = document.getElementById('mapaBatallaResult')
+let mapaBatallaElejido = ""
+let mapaBatalla1 = document.getElementById("mapa1")
+let mapaBatalla2 = document.getElementById("mapa2")
+let mapaBatalla3 = document.getElementById("mapa3")
+let mapaBatalla4 = document.getElementById("mapa4")
+
+const mapa1 = () => {
+    mapaBatallaElejido = "url('assets/img/intro-1.gif')"
+    mapaBatalla1.classList.add("playerSelected");
+    setTimeout(() =>{
+        cambiaPantalla(5)
+    },3000)
+}
+
+const mapa2 = () => {
+    mapaBatallaElejido = "url('assets/img/intro-2.gif')"
+    mapaBatalla2.classList.add("playerSelected");
+    setTimeout(() =>{
+        cambiaPantalla(5)
+    },3000)
+}
+
+const mapa3 = () => {
+    mapaBatallaElejido = "url('assets/img/intro-3.gif')"
+    mapaBatalla3.classList.add("playerSelected");
+    setTimeout(() =>{
+        cambiaPantalla(5)
+    },3000)
+}
+
+const mapa4 = () => {
+    mapaBatallaElejido = "url('assets/img/intro-4.gif')"
+    mapaBatalla4.classList.add("playerSelected");
+    console.log(mapaBatallaElejido)
+    setTimeout(() =>{
+        cambiaPantalla(5)
+    },3000)
+}
 
 
-/*
 const mapaBatallaSelected = () => {
 
-    switch
-}*/
+    mapaBatalla.style.backgroundImage = mapaBatallaElejido
+}
+
 
 
 // Funciones 
@@ -65,7 +103,7 @@ const cambiaPantalla = (cambio) => {
         screenTitle.style.backgroundPosition = "center"
         audioTitulo.volume = 0.2
         audioTitulo.play()
-        setTimeout(function () {
+        setTimeout(() => {
             cambiaPantalla(2)
         }, 6000)
     }
@@ -89,13 +127,13 @@ const cambiaPantalla = (cambio) => {
         transicion1 = setTimeout(() => {
             transicionInicio.style.backgroundSize = "cover"
             transicionInicio.style.backgroundImage = "url('assets/img/intro-4.gif')";
-            setTimeout(function () {
+            setTimeout(() => {
                 transicionInicio.style.backgroundSize = "cover"
                 transicionInicio.style.backgroundImage = "url('assets/img/intro-2.gif')";
-                setTimeout(function () {
+                setTimeout(() => {
                     transicionInicio.style.backgroundSize = "cover"
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
-                    setTimeout(function () {
+                    setTimeout(() => {
                         cambiaPantalla(3)
                     }, 50)
                 }, 50)
@@ -326,13 +364,3 @@ const winer = () => {
 const mostrarGanador = () => {
     console.log(ganador)
 }
-
-
-
-
-//src=`img\${jugador1.nombre}.jpg`
-
-/*
-let divLuchador1 = document.getElementById("iddeldiv");
-divLuchador1.style.src
-*/
