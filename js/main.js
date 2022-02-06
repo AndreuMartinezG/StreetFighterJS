@@ -9,6 +9,7 @@ const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3');
 const audioSelect = new Audio('assets/sounds/characterSelect.mp3');
 const audioBattle = new Audio('assets/sounds/battle.mp3')
 const audioHit = new Audio('assets/sounds/hit.mp3')
+const audioWin = new Audio('assets/sounds/win.mp3')
 const screen3Tecla = document.getElementById('screen3');
 
 
@@ -114,10 +115,6 @@ const cambiaPantalla = (cambio) => {
 
 
     //Animacion para transicion entre inicio y pulsaStart
-
-    /* Intento de asignar variable a los time out de las transiciones*/
-
-
     if (pantallaDeseada == "screen2") {
         audioTitulo.pause()
         audioIntro.volume = 0.2
@@ -125,7 +122,6 @@ const cambiaPantalla = (cambio) => {
         audioIntro.loop = true
         transicionInicio.style.backgroundImage = "url('assets/img/intro-1.gif')";
         transicionInicio.style.backgroundSize = "cover"
-
 
 
         transicion1 = setTimeout(() => {
@@ -149,12 +145,6 @@ const cambiaPantalla = (cambio) => {
     //Imagen para Pantalla Pulsa Cualquier tecla para continuar
     if (pantallaDeseada == "screen3") {
 
-        /* Intento de Detener las transiciones
-        clearTimeout(transicion1)
-        clearTimeout(transicion2)
-        clearTimeout(transicion3)
-        clearTimeout(transicion4)
-        */
         transicion1 = "";
         audioIntro.volume = 0.2
         audioIntro.play()
@@ -171,7 +161,7 @@ const cambiaPantalla = (cambio) => {
     }
 
 
-    //Pantalla Controles
+    //Pantalla Seleccion Mapa
     if (pantallaDeseada == "screen4") {
         audioIntro.pause()
         audioSelect.volume = 0.2
@@ -179,12 +169,13 @@ const cambiaPantalla = (cambio) => {
         audioSelect.loop = true
     }
 
-
+    //Pantalla Seleccion PJ
     if (pantallaDeseada == "screen5") {
         selectPj1.style.backgroundColor = "#202124"
         
     }
 
+    //Pantalla Presentacion Batalla
     if (pantallaDeseada == "screen7") {
         audioSelect.pause()
         audioNextBattle.volume = 0.2
@@ -192,12 +183,14 @@ const cambiaPantalla = (cambio) => {
         audioNextBattle.loop = false
     }
 
+    //Pantalla Batalla
     if (pantallaDeseada == "screen8") {
         audioNextBattle.pause()
         audioBattle.volume = 0.2
         audioBattle.play()
         audioBattle.loop = true
     }
+
     //Pantalla WIN
     if (pantallaDeseada == "screen9") {
         audioBattle.pause()
