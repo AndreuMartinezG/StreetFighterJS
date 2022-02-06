@@ -28,7 +28,7 @@ body {
 
 
 .designScreen4 {
-    background-color:aqua;
+    background-color:#202124;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -36,6 +36,7 @@ body {
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    color: red
 
 }
 
@@ -46,19 +47,31 @@ body {
 }
 
 .mapa1 {
-    background-color: burlywood;
+    background-image: url("../assets/img/intro-1.gif");
+    background-size: cover;
+    border: 1px solid red;
+    cursor: pointer;
 }
 
 .mapa2 {
-    background-color: chartreuse;
+    background-image: url("../assets/img/intro-2.gif");
+    background-size: cover;
+    border: 1px solid red;
+    cursor: pointer;
 }
 
 .mapa3 {
-    background-color: black
+    background-image: url("../assets/img/intro-3.gif");
+    background-size: cover;
+    border: 1px solid red;
+    cursor: pointer;
 }
 
 .mapa4 {
-    background-color: brown;
+    background-image: url("../assets/img/intro-4.gif");
+    background-size: cover;
+    border: 1px solid red;
+    cursor: pointer;
 }
 
 /*Diseño pantalla 5 - Selecciona personaje 1 y 2*/
