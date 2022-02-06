@@ -277,7 +277,7 @@ body {
 }
 
 /* Diseño Batalla */
-.designScreen8 {
+#mapaBatallaResult {
     background-image: url("../assets/img/intro-3.gif");
     background-size: cover;
     height: 100vh;
@@ -289,6 +289,7 @@ body {
 }
 
 .statsDisplay {
+
     height: 10em;
     width: 100vw;
     display: flex;
@@ -371,6 +372,7 @@ body {
 }
 
 .battleDisplay {
+ 
 
     height: 47em;
     width: 100vw;
@@ -395,6 +397,7 @@ body {
 }
 
 #batallaJugador2 {
+
     width: 20em;
     height: 20em;
 
@@ -404,7 +407,7 @@ body {
 }
 
 .floorDisplay {
-    
+
     height: 4em;
     width: 100vw;
     display: flex;
@@ -421,6 +424,7 @@ body {
     align-items: center;
     justify-content: center;
     color: red;
+    cursor: pointer;
 }
 
 

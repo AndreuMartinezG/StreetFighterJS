@@ -2,7 +2,6 @@ const screenTitle = document.getElementById('inicio');
 const transicionInicio = document.getElementById('transicionInicio');
 const pulsaStart = document.getElementById('pulsaStartInicio');
 const selectPj1 = document.getElementById('pj1');
-
 const win = document.getElementById('pagWin');
 const audioTitulo = new Audio('assets/sounds/audioTitulo.mp3');
 const audioIntro = new Audio('assets/sounds/street-fighter.mp3');
@@ -10,6 +9,12 @@ const audioNextBattle = new Audio('assets/sounds/Get-ready-battle.mp3');
 const audioSelect = new Audio('assets/sounds/characterSelect.mp3');
 const audioBattle = new Audio('assets/sounds/battle.mp3')
 const screen3Tecla = document.getElementById('screen3');
+
+
+// Elementos para la eleccion de Mapa
+
+let mapaBatalla = document.getElementById('mapaBatallaResult')
+
 
 
 // Funciones 
@@ -210,7 +215,6 @@ const displayGame = () => {
 }
 
 //Elementos para mostrar los personajes seleccionados
-
 let displayPlayer1 = document.getElementById("presentacionPlayer1");
 let displayPlayer2 = document.getElementById("presentacionPlayer2");
 let banderaPlayer1 = document.getElementById("banderaPresentacion1");
@@ -234,8 +238,8 @@ const game = () => {
 
 const hit = () => {
 
-    
-    
+
+
     player1.pegar();
     player2.pegar();
     contadorVida()
@@ -248,13 +252,13 @@ const hit = () => {
 //Funcion para actualizar la vida
 
 const contadorVida = () => {
-    if ((player1.vida > 0 ) && (player2.vida > 0 )) {
+    if ((player1.vida > 0) && (player2.vida > 0)) {
         let vidaPlayer1 = player1.vida;
         let vidaPlayer2 = player2.vida;
-            vidaPlayer1 = (vidaPlayer1 * 100)/300;
-            document.getElementById("barraVidaIzq").style.width = vidaPlayer1+"%";
-            vidaPlayer2 = (vidaPlayer2 * 100)/300;
-            document.getElementById("barraVidaDer").style.width = vidaPlayer2+"%";
+        vidaPlayer1 = (vidaPlayer1 * 100) / 300;
+        document.getElementById("barraVidaIzq").style.width = vidaPlayer1 + "%";
+        vidaPlayer2 = (vidaPlayer2 * 100) / 300;
+        document.getElementById("barraVidaDer").style.width = vidaPlayer2 + "%";
     } else if (player1.vida <= 0) {
         document.getElementById("barraVidaIzq").style.width = 0;
     } else {
@@ -267,8 +271,8 @@ const contadorVida = () => {
 const winer = () => {
     if (player1.vida <= vidaMuerte) {
 
-        ganador = player1;
-        console.log(`${player1.nombre}`)
+        ganador = player2;
+        console.log(`${player2.nombre}`)
         setTimeout(() => {
             cambiaPantalla(9);
             mostrarGanador();
@@ -277,14 +281,22 @@ const winer = () => {
     }
     if (player2.vida <= vidaMuerte) {
 
-        ganador = player2;
-        console.log(`${player2.nombre}`)
+        ganador = player1;
+        console.log(`${player1.nombre}`)
         setTimeout(() => {
             cambiaPantalla(9);
             mostrarGanador();
         }, 3500)
-    } 
+    }
 }
+
+
+// DISEÑO DE Pantalla de Ganador 
+
+const mostrarGanador = () => {
+    console.log(ganador)
+}
+
 
 
 
