@@ -219,7 +219,7 @@ body {
     justify-content: center;
     color: red;
     margin-top: 2em;
-    cursor: pointer;
+
 }
 
 .divblanco {
@@ -480,7 +480,7 @@ body {
 .winContainer {
     height: 55em;
     width: 40em;
-    background-color: blue;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -491,7 +491,7 @@ body {
 .tituloWin {
     height: 5em;
     width: 30em;
-    background-color: rosybrown;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -501,7 +501,7 @@ body {
 #playerWin{
     height: 45em;
     width: 40em;
-    background-color: royalblue;
+    
     margin-top: 1em;
     display: flex;
     align-items: center;
@@ -510,7 +510,7 @@ body {
 }
 
 #nombreWin {
-    background-color: salmon;
+
     height: 5em;
     width: 35em;
     display: flex;
@@ -520,7 +520,7 @@ body {
 }
 
 #imgWin {
-    background-color: seagreen;
+    
     height: 30em;
     width: 20em;
     margin-top: 1em;
@@ -536,4 +536,5 @@ body {
     margin-top: 1em;
     border: 1px solid red;
     border-radius: 25%;
+    cursor: pointer;
 }

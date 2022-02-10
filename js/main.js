@@ -23,39 +23,39 @@ let mapaBatalla3 = document.getElementById("mapa3")
 let mapaBatalla4 = document.getElementById("mapa4")
 
 
-
+// Mapas para la Batalla
 
 const mapa1 = () => {
     mapaBatallaElejido = "url('assets/img/intro-1.gif')"
     mapaBatalla1.classList.add("playerSelected");
-    setTimeout(() =>{
+    setTimeout(() => {
         cambiaPantalla(5)
-    },3000)
+    }, 3000)
 }
 
 const mapa2 = () => {
     mapaBatallaElejido = "url('assets/img/intro-2.gif')"
     mapaBatalla2.classList.add("playerSelected");
-    setTimeout(() =>{
+    setTimeout(() => {
         cambiaPantalla(5)
-    },3000)
+    }, 3000)
 }
 
 const mapa3 = () => {
     mapaBatallaElejido = "url('assets/img/intro-3.gif')"
     mapaBatalla3.classList.add("playerSelected");
-    setTimeout(() =>{
+    setTimeout(() => {
         cambiaPantalla(5)
-    },3000)
+    }, 3000)
 }
 
 const mapa4 = () => {
     mapaBatallaElejido = "url('assets/img/intro-4.gif')"
     mapaBatalla4.classList.add("playerSelected");
     console.log(mapaBatallaElejido)
-    setTimeout(() =>{
+    setTimeout(() => {
         cambiaPantalla(5)
-    },3000)
+    }, 3000)
 }
 
 
@@ -95,7 +95,7 @@ const cambiaPantalla = (cambio) => {
 
 
     for (let pantalla of arrayPantallas) {
-        document.getElementById(pantalla).style.display = "none";
+        document.getElementById(pantalla).style.display = "none"; 
 
     }
 
@@ -135,10 +135,10 @@ const cambiaPantalla = (cambio) => {
                     transicionInicio.style.backgroundImage = "url('assets/img/intro-3.gif')";
                     setTimeout(() => {
                         cambiaPantalla(3)
-                    }, 50)
-                }, 50)
-            }, 50)
-        }, 50);
+                    }, 3750)
+                }, 3750)
+            }, 3750)
+        }, 3750);
     }
 
 
@@ -172,7 +172,7 @@ const cambiaPantalla = (cambio) => {
     //Pantalla Seleccion PJ
     if (pantallaDeseada == "screen5") {
         selectPj1.style.backgroundColor = "#202124"
-        
+
     }
 
     //Pantalla Presentacion Batalla
@@ -231,7 +231,7 @@ const selectorFighter = (nFighter) => {
             Vida: ${player2.vida}<br>
             Ataque: ${player2.ataque}<br>
             Defensa: ${player2.defensa}<br>
-            Resistencia: ${player2.suerte}
+            Suerte: ${player2.suerte}
         `;
         console.log(player2, player1)
         setTimeout(() => {
@@ -359,6 +359,10 @@ const winer = () => {
 
 // DISEÑO DE Pantalla de Ganador 
 
+let nombreWin = document.getElementById('nombreWin');
+let imgWin = document.getElementById('imgWin');
+
 const mostrarGanador = () => {
-    console.log(ganador)
+    nombreWin.innerHTML = `${ganador.nombre}`
+    imgWin.innerHTML = `<img class="foto" style="width:20em;height:30em" src="assets/img/${ganador.imgRute}.gif" alt="primerLuchador"/>`;
 }
