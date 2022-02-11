@@ -20,11 +20,14 @@ Puedes previsualizar el Proyecto haciendo click [aqui](https://andreumartinezg.g
 
 ## 1. Introducción.
 
-En este proyecto he desarrollado un juego basandome en la tematica de Street Fighter.
+En este proyecto he desarrollado un juego basándose en la temática de Street Fighter.
 
-En el podemos encontrar varias pantallas creadas sobre un unico archivo index.html y usando JavaScript Vanilla.
 
-Tenemos varias pantallas de seleccion, empezando por la que nos permite seleccionar el mapa que se va a visualizar en la batalla:
+En él, podemos encontrar varias pantallas creadas sobre un único archivo index.html y usando JavaScript Vanilla.
+
+
+
+Tenemos varias pantallas de selección, empezando por la que nos permite seleccionar el mapa que se va a visualizar en la batalla:
 
 ![Juego](assets/img/mapa_readme.png)
 
@@ -33,7 +36,7 @@ En la siguiente pantalla se nos permite seleccionar los campeones que vamos a ut
 ![Juego](assets/img/select_readme.png)
 <br>
 
-Cuenta tambien con una pantalla para la batalla con el mapa y los personajes seleccionados:
+Cuenta también con una pantalla para la batalla con el mapa y los personajes seleccionados:
 
 ![Juego](assets/img/batalla_readme.png)
 
@@ -41,7 +44,7 @@ Cuenta tambien con una pantalla para la batalla con el mapa y los personajes sel
 
 ## 2. Como Usar.
 
-- Las Funcionalidades son bastantes basicas, seleccionamos mapa y luchadores para la batalla, en el transcurso de la batalla unicamente se podra pulsar sobre el boton pegar para lanzar las animaciones y los daños sobre los luchadores.
+- Las Funcionalidades son bastantes básicas, seleccionamos mapa y luchadores para la batalla, en el transcurso de la batalla unicamente sé podra pulsar sobre el botón pegar para lanzar las animaciones y los daños sobre los luchadores.
 
 ## 3. Descripción del proyecto.
 
@@ -52,15 +55,15 @@ Cuenta tambien con una pantalla para la batalla con el mapa y los personajes sel
 
 ## 4. Diseño.
 
-- Me he inspirado en la saga de juegos Street ya que me resulta muy visual, añadiendo los sonidos y imagenes del mismo.
+- Me he inspirado en la saga de juegos Street ya que me resulta muy visual, añadiendo los sonidos y imágenes del mismo.
 
 
 
 ## 5. Futuras funcionalidades.
 
-- Me habria gustado poder añadir funcionalidades a las teclas como en el juego real, introduciendo mas jugabilidad.
+- Me habría gustado poder añadir funcionalidades a las teclas como en el juego real, introduciendo más jugabilidad.
 
-- Tambien tengo pensado añadir sprites de todos los luchadores para acompañar a la jugabilidad añadida en futuras funcionalidades.
+- También tengo pensado añadir sprites de todos los luchadores para acompañar a la jugabilidad añadida en futuras funcionalidades.
 
 ## 6.Herramientas Utilizadas:
 
